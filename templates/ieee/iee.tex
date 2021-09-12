@@ -1,0 +1,89 @@
+% One column version
+%\documentclass[journal,12pt,onecolumn]{IEEEtran}
+% Two columns
+\documentclass[journal,12pt]{IEEEtran}
+
+%Language and char encoding
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+%Lorem ipsum text generator
+\usepackage{lipsum}
+
+
+\ifCLASSINFOpdf
+\else
+   \usepackage[dvips]{graphicx}
+\fi
+
+\usepackage{url}
+\usepackage[none]{hyphenat}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage[inline]{enumitem}
+\usepackage{textcomp}
+
+
+
+
+% ---------------- BEGING DOCUMENT ------------------ %
+\begin{document}
+
+
+% ------ Title setup ------%
+\title{TITLE OF THE \\ DOCUMENT}
+\author{Sergio de las Heras Pérez }
+\maketitle
+
+
+%------ Abstract ------%
+\begin{abstract}
+\lipsum[1-2]
+\end{abstract}
+
+%------ Keywords ------%
+\noindent\textbf{Key words}: keyword1, keyword2, keyword3, keyword4, keyword5, keyword6, keyword7, keyword8, keyword9, keyword10, keyword11, keyword12 . 
+
+
+%------ Sections ------ %
+
+\section{This is the first section}
+
+\lipsum[2-6]
+
+Cite stuff here \cite{Cite1}and here \cite{Cite2}
+
+\section{And this is the second section}
+
+\lipsum[4-6]
+
+\begin{itemize}
+	\item \textbf{Item 1}: \lipsum[6]
+			
+	\item \textbf{Item 2}: \lipsum[7] \footnote{\url{https://iamaurl.com}}
+	
+	\item \textbf{Longer item number 3}: \lipsum[8-9]	
+\end{itemize}
+
+\lipsum[1]\footnote{I am a footnote}
+
+\section{Ending section}
+
+\lipsum[3-5]
+
+
+
+
+%------ Print the bibliography ------%
+%Compile bibliograpphy with BibLaTex and BibTex
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography/bibliography.bib}
+
+
+
+
+\end{document}
